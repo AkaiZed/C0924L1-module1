@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>TÍNH ĐIỂM TRUNG BÌNH CÁC MÔN HỌC </h1>
+<p id="ly"></p>
+<p id="hoa"></p>
+<p id="sinh"></p>
+<p id="ketQua"></p>
+<script>
+    function checkDiem(monHoc) {
+        let diem = 0;
+        do {
+            diem = parseFloat(prompt("Nhập điểm môn " + monHoc + " (0-10): "));
+        } while (isNaN(diem) || diem < 0 || diem > 10)
+        return diem;
+
+    }
+
+    let ly = checkDiem("lý");
+    let hoa = checkDiem("hoá");
+    let sinh = checkDiem("sinh");
+
+    document.getElementById("ly").innerText = "Điểm lý bạn vừa nhập là: " + ly;
+    document.getElementById("hoa").innerText = "Điểm hóa bạn vừa nhập là: " + hoa;
+    document.getElementById("sinh").innerText = "Điểm sinh bạn vừa nhập là: " + sinh;
+
+    let ketQua = (ly + hoa + sinh) / 3;
+    document.getElementById("ketQua").innerText = "Điểm trung bình của 3 môn là: " + ketQua.toFixed(3);
+
+</script>
+</body>
+</html>

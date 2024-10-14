@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>CHƯƠNG TRÌNH TÍNH DIỆN TÍCHC HÌNH TRÒN</h1>
+<label for="radius">Nhập bán kính</label>
+<input type="number" value="0" id="radius" placeholder="nhập tại đây">
+<br><br>
+<button onclick="chuyenDoi()">Tính diện tích</button>
+<script>
+
+    function chuyenDoi() {
+        let banKinh = document.getElementById("radius").value;
+
+        if (banKinh < 0) {
+            document.getElementById("ketQua").innerText = "Lỗi cú pháp, vui lòng thử lại";
+            return
+        }
+        // const PI = Math.PI;
+        let dienTich = Math.PI * banKinh * banKinh;
+        document.getElementById("ketQua").innerText = dienTich.toFixed(2);
+    }
+</script>
+<p id="ketQua"></p>
+</body>
+</html>

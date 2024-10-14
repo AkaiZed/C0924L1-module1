@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>TÍNH CHU VI HÌNH TRÒN</h1>
+<label for="radius">Nhập bán kính </label>
+<input type="number" value="0" id="radius" placeholder="nhập tại đây">
+<br><br>
+<button onclick="chuyenDoi()">Tính chu vi</button>
+<script>
+
+    function chuyenDoi() {
+        let banKinh = document.getElementById("radius").value;
+
+        if (banKinh < 0) {
+            document.getElementById("ketQua").innerText = "Lỗi cú pháp, vui lòng thử lại";
+            return
+        }
+        let chuVi = 2 * Math.PI * banKinh;
+        document.getElementById("ketQua").innerText = chuVi.toFixed(2);
+    }
+</script>
+<p id="ketQua"></p>
+</body>
+</html>
