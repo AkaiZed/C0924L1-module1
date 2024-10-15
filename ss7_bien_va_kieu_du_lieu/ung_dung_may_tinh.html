@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h1>MÁY TÍNH</h1>
+<input type="number" id="numb1" placeholder="Nhập số thứ nhất">
+<input type="number" id="numb2" placeholder="Nhập số thứ hai">
+<br><br>
+<button onclick="tinhCong()">Phép cộng(+)</button>
+<button onclick="tinhTru()">Phép trừ(-)</button>
+<button onclick="tinhNhan()">Phép nhân(*)</button>
+<button onclick="tinhChia()">Phép chia(/)</button>
+<br><br>
+<script>
+
+    function tinhCong() {
+        let soThuNhat = parseFloat(document.getElementById("numb1").value);
+        let soThuHai = parseFloat(document.getElementById("numb2").value);
+
+        let result = soThuNhat + soThuHai;
+        document.getElementById("ketQua").innerText = "Kết quả: " + result;
+    }
+
+    function tinhTru() {
+        let soThuNhat = parseFloat(document.getElementById("numb1").value);
+        let soThuHai = parseFloat(document.getElementById("numb2").value);
+
+        let result = soThuNhat - soThuHai;
+        document.getElementById("ketQua").innerText = "Kết quả: " + result;
+    }
+
+    function tinhNhan() {
+        let soThuNhat = parseFloat(document.getElementById("numb1").value);
+        let soThuHai = parseFloat(document.getElementById("numb2").value);
+        let result = soThuNhat * soThuHai;
+        document.getElementById("ketQua").innerText = "Kết quả: " + result;
+    }
+
+    function tinhChia() {
+        let soThuNhat = parseFloat(document.getElementById("numb1").value);
+        let soThuHai = parseFloat(document.getElementById("numb2").value);
+
+        if (soThuHai === 0) {
+            document.getElementById("ketQua").innerText = "Lỗi cú pháp, vui lòng thử lại";
+        } else {
+            let result = soThuNhat / soThuHai;
+            document.getElementById("ketQua").innerText = "Kết quả: " + result.toFixed(2);
+        }
+    }
+</script>
+<p id="ketQua"></p>
+</body>
+</html>
