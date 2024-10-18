@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tam giá vuông</title>
+</head>
+<body>
+<script>
+    let canhThuNhat = +prompt("Nhập cạnh kề thứ 1 của tam giác vuông: ");
+    let canhThuHai = +prompt("Nhập cạnh kề thứ 2 của tam giác vuông: ");
+
+    if (isNaN(canhThuNhat) || isNaN(canhThuHai)) {
+        alert("Vui lòng nhập số hợp lệ cho cả 2 cạnh!");
+    } else if (canhThuNhat <= 0 || canhThuHai <= 0) {
+        alert("Các cạnh phải lớn hơn 0!");
+    } else {
+        let dienTich = canhThuNhat * canhThuHai;
+        alert("Diện tích hình tam giác vuông là: " + (dienTich.toFixed(2)) / 2);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính giá điện</title>
+</head>
+<body>
+<script>
+    let soDien = +prompt("Nhập số điện: ");
+    if (isNaN(soDien) || soDien < 0) {
+        alert("Lỗi cú pháp, vui lòng thử lại");
+    } else {
+        let giaDien = soDien * 3000;
+        alert(soDien + " có giá điện là: " + giaDien);
+    }
+</script>
+</body>
+</html>

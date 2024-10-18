@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuổi</title>
+</head>
+<body>
+<script>
+    let dauVao = +prompt("Nhập tuổi: ");
+    if (isNaN(dauVao) || dauVao % 1 !== 0) {
+        alert("Sai cú pháp, vui lòng thử lại")
+    } else if (dauVao < 0 || dauVao > 120) {
+        alert("Không phải tuổi người");
+    } else {
+        alert("Đây là tuổi người")
+    }
+</script>
+</body>
+</html>

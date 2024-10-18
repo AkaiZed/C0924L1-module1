@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập a: ");
+    let b = +prompt("Nhập b: ");
+    if (isNaN(a) || isNaN(b)) {
+        alert("Sai cú pháp, vui lòng nhập lại");
+    } else if (a === 0) {
+        if (b === 0) {
+            alert("Phương trình vô số nghiệm");
+        } else {
+            alert("Lỗi a = 0, vui lòng thử lại");
+        }
+    } else {
+        alert("Phương trình bạn vừa nhập là: " + a + "x + ( " + b + " ) = 0");
+        alert("Phương trình có nghiệm duy nhất là: " + (-b / a));
+    }
+</script>
+</body>
+</html>

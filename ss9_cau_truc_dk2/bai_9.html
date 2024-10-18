@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tam giác</title>
+</head>
+<body>
+<script>
+    let a = ("Nhập cạnh thứ nhất: ");
+    let b = ("Nhập cạnh thứ hai: ");
+    let c = ("Nhập cạnh thứ ba: ");
+    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        alert("Lỗi cú pháp, thử lại");
+    } else if (a <= 0 || b <= 0 || c <= 0) {
+        alert("Cạnh tam giác không thể bé hơn 0");
+    } else if ((a + b > c) && (b + c > a) && (a + c > b)) {
+        alert("3 cạnh này là 1 tam giác");
+    } else {
+        alert("3 cạnh này không phải là 1 tam giác");
+    }
+</script>
+</body>
+</html>
