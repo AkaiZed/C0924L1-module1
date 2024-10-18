@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập a: ");
+    let b = +prompt("Nhập b: ");
+    if (!isNaN(a) && !isNaN(b) && b !== 0) {
+        if (a % b === 0) {
+            alert(a + " chia hết cho " + b);
+        } else {
+            alert(a + " không chia hết cho " + b);
+        }
+    } else {
+        alert("Vui lòng nhập số hợp lệ và đảm bảo b khác 0");
+    }
+</script>
+</body>
+</html>

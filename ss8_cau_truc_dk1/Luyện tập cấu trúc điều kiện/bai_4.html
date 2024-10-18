@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập a: ");
+    let b = +prompt("Nhập b: ");
+    let c = +prompt("Nhập c: ");
+    if (Number.isInteger(a) && Number.isInteger(b) && Number.isInteger(c)) {
+        if (a > b) {
+            if (a > c) {
+                console.log("Max là:" + a);
+            } else {
+                console.log("Max là:" + c);
+            }
+        } else {
+            if (b > c) {
+                console.log("Max là:" + b);
+            } else {
+                console.log("Max là:" + c);
+            }
+        }
+    } else {
+        alert("Sai đề, yêu cầu nhập lại");
+    }
+
+</script>
+</body>
+</html>

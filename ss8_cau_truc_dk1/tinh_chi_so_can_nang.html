@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<h1>TÍNH CHỈ SỐ CÂN NẶNG CỦA CƠ THỂ DỰA TRÊN CHIỀU CAO</h1>
+<label for="weight">Nhập chiều cao </label>
+<input type="number" id="weight" min="0" placeholder="Nhập theo đơn vị kg">
+<br><br>
+<label for="height">Nhập chiều cao </label>
+<input type="number" id="height" min="0" placeholder="Nhập theo đơn vị cm">
+<br><br>
+<button onclick="calculate()">Show BMI</button>
+<p id="ketQua"></p>
+<p id="ketLuan"></p>
+<script>
+    function chuyenDoiChieuCao(value) {
+        return (value / 100);
+    }
+
+    function calculate() {
+        let canNang = parseFloat(document.getElementById("weight").value);
+        let chieuCaoCu = parseFloat(document.getElementById("height").value);
+        let chieuCaoMoi = chuyenDoiChieuCao(chieuCaoCu);
+        if (canNang > 0 && chieuCaoCu > 0) {
+            let bmi = canNang / (chieuCaoMoi * chieuCaoMoi);
+            document.getElementById("ketQua").innerText = "Kết quả BMI là: " + bmi.toFixed(2);
+            if (bmi < 18.5) {
+                document.getElementById("ketLuan").innerText = "Phân loại: Underweight";
+            }else if (bmi< 25.0){
+                document.getElementById("ketLuan").innerText = "Phân loại: Normal";
+            }else if (bmi< 30.0){
+                document.getElementById("ketLuan").innerText = "Phân loại: Overweight";
+            }else{
+                document.getElementById("ketLuan").innerText = "Phân loại: Obese";
+            }
+        } else {
+            document.getElementById("ketQua").innerText = "Lỗi cú pháp, vui lòng thử lại";
+        }
+
+    }
+
+</script>
+</body>
+</html>
