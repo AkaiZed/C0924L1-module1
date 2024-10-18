@@ -5,13 +5,32 @@
     <title>Xếp hạng học sinh</title>
 </head>
 <body>
-<h1>Xếp hạng học lực của học sinh</h1>
-<form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
-    <a href="https://james.codegym.vn/mod/assign/view.php?id=15427" target="_blank">Link bài</a>
-    <label for="kTra">Nhập điểm kiểm tra </label>
-    <input type="number" id="kTra" min="0" max="10" placeholder="Nhập vào đây" name="Điểm Kiểm Tra">
-<!--    <label for="gKy">Nhập điểm giữa kỳ</label>-->
-    <button>Đăng Ký</button>
-</form>
+<!--<h1>Xếp hạng học lực của học sinh</h1>-->
+<!--<form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">-->
+<!--    <a href="https://james.codegym.vn/mod/assign/view.php?id=15427" target="_blank">Link bài</a>-->
+<!--    <label for="kTra">Nhập điểm kiểm tra </label>-->
+<!--    <input type="number" id="kTra" min="0" max="10" placeholder="Nhập vào đây" name="Điểm Kiểm Tra">-->
+<!--&lt;!&ndash;    <label for="gKy">Nhập điểm giữa kỳ</label>&ndash;&gt;-->
+<!--    <button>Đăng Ký</button>-->
+<!--</form>-->
+<script>
+    let diemMotTiet = +prompt("Nhập điểm kiểm tra 1 tiết vào đây: ");
+    let diemGiuaKy = +prompt("Nhập điểm kiểm tra giữa kỳ vào đây: ");
+    let diemCuoiKy = +prompt("Nhập điểm kiểm tra cuối kỳ vào đây: ");
+
+    function tinhTong() {
+        return (diemCuoiKy + diemMotTiet + diemGiuaKy) / 3;
+    }
+
+    if (tinhTong() > 9) {
+        alert("Học sinh giỏi");
+    } else if (tinhTong() > 7) {
+        alert("Học sinh khá");
+    } else if (tinhTong() > 5) {
+        alert("Học sinh trung bình");
+    } else {
+        alert("Học sinh yếu");
+    }
+</script>
 </body>
 </html>
