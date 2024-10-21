@@ -6,12 +6,23 @@
 </head>
 <body>
 <script>
-    let soDien = +prompt("Nhập số điện: ");
+    let soDien = +prompt("Nhập số điện tiêu thụ (kWh): ");
     if (isNaN(soDien) || soDien < 0) {
         alert("Lỗi cú pháp, vui lòng thử lại");
     } else {
-        let giaDien = soDien * 3000;
-        alert(soDien + " có giá điện là: " + giaDien);
+        let giaDien = 0;
+
+        if (soDien <= 50) {
+            giaDien = soDien * 1500;
+        } else if (soDien <= 100) {
+            giaDien = (50 * 1500) + ((soDien - 50) * 2000);
+        } else if (soDien <= 200) {
+            giaDien = (50 * 1500) + (50 * 2000) + ((soDien - 100) * 2500);
+        } else {
+            giaDien = (50 * 1500) + (50 * 2000) + (100 * 2500) + ((soDien - 200) * 3000);
+        }
+
+        alert(soDien + " kWh điện tiêu thụ " + " có giá điện là: " + giaDien + " VND");
     }
 </script>
 </body>
