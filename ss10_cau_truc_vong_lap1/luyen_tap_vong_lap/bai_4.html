@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm sô fibonacci chia hết 5</title>
+</head>
+<body>
+<script>
+    let soTruoc = 1, soSau = 1;
+    do {
+        let sum = soTruoc + soSau;
+        soTruoc = soSau;
+        soSau = sum;
+        if (sum % 5 === 0) {
+            console.log(sum + " chia hết cho 5");
+            break;
+        }
+    } while (true)
+</script>
+</body>
+</html>

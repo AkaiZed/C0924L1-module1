@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 số đầu trong dãy fibonacci</title>
+</head>
+<body>
+<script>
+    // let fibonacci = [1, 1];
+    // console.log(1);
+    // console.log(1);
+    // for (let i = 2; i < 20; i++) {
+    //     fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+    //     console.log(fibonacci[i]);
+    // }
+    let soTruoc = 1;
+    let soSau = 1;
+    console.log(soTruoc);
+    console.log(soSau);
+    for (let i = 2; i < 20; i++) {
+        let sum = soSau + soTruoc;
+        console.log(sum);
+        soTruoc = soSau;
+        soSau = sum;
+    }
+</script>
+</body>
+</html>

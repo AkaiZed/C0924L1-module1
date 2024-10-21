@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lấy thông tin nhiệt độ</title>
+</head>
+<body>
+<script>
+    do {
+        let nhietDo = +prompt("Nhập nhiệt độ: ");
+        if (isNaN(nhietDo) || nhietDo < 0) {
+            alert("Lỗi, vui lòng thử lại");
+            continue;
+        } else if (nhietDo > 100) {
+            alert("Hãy giảm nhiệt độ! ");
+            continue;
+        } else if (nhietDo < 20) {
+            alert("Hãy tăng nhiệt độ!");
+            continue;
+        } else {
+            break;
+        }
+    } while (true)
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số </title>
+</head>
+<body>
+<button onclick="tinhToan()">Chơi</button>
+<script>
+    function tinhToan() {
+        let khoangCach = 0;
+        while (true) {
+            khoangCach = +prompt("Nhập giới hạn bạn muốn đoán (min = 5): ");
+            if (isNaN(khoangCach) || khoangCach < 5) {
+                alert("Sai yêu cầu, vui lòng nhập lại");
+            } else {
+                break;
+            }
+        }
+        let soRandom = Math.floor(Math.random() * (khoangCach - 1 + 1)) + 1;
+        for (let i = 1; i < 4; i++) {
+            while (true) {
+                var soChon = +prompt("Nhập số mà bạn đoán: ");
+                if (isNaN(soChon) || soChon < 5 || soChon > khoangCach) {
+                    alert("Sai yêu cầu, vui lòng nhập lại");
+                } else {
+                    break;
+                }
+            }
+            if (soRandom === soChon) {
+                alert("Chúc mừng bạn đã nhập đúng");
+                break;
+            } else if (soChon < soRandom) {
+                alert("Số bạn nhập bé hơn");
+                continue;
+            } else {
+                alert("Số bạn nhập lớn hơn");
+                continue;
+            }
+        }
+    }
+</script>
+</body>
+</html>
