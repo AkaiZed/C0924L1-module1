@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d592e85a-dd29-4b5d-a748-bef00e5a02ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bai-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai_8.html" afterDir="false" />
-    </list>
+    <list default="true" id="d592e85a-dd29-4b5d-a748-bef00e5a02ff" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,11 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2nkSHxLS7CAXRMq1IqnviMr8HES" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,8 +32,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.bang_cuu_chuong.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/CodeGit/C0924L1-module1/ss10_cau_truc_vong_lap1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,6 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1729515496881</updated>
       <workItem from="1729515497902" duration="4741000" />
+      <workItem from="1729676295085" duration="15000" />
+      <workItem from="1729676359606" duration="468000" />
     </task>
     <servers />
   </component>
