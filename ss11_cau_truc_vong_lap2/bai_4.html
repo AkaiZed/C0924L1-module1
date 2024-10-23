@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình chữ nhật</title>
+</head>
+<body>
+<!--<img src="https://james.codegym.vn/pluginfile.php/64959/mod_assign/intro/5.png">-->
+</body>
+<script>
+    let n = 10, m = 5;
+    let chuNhat = "";
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (i === 1 || i === 5) {
+                chuNhat += "*";
+            } else if (j === 1 || j === 10) {
+                chuNhat += "*";
+            } else {
+                chuNhat += " ";
+            }
+        }
+        chuNhat+="\n";
+    }
+    console.log(chuNhat);
+</script>
+</html>

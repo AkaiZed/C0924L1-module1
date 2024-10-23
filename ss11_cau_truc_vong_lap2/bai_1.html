@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy fibonacci</title>
+</head>
+<body>
+<script>
+    do {
+        var n = +prompt("Nhập giới hạn số cần in: ");
+        if (isNaN(n) || n <= 0 || n % 2 !== 0) {
+            alert("Lỗi cú pháp, vui lòng nhập lại")
+        } else {
+            break;
+        }
+    } while (true)
+    let soTruoc = 1;
+    let soSau = 1;
+    console.log(soTruoc);
+    console.log(soSau);
+    for (let i = 2; i < n; i++) {
+        let sum = soSau + soTruoc;
+        console.log(sum);
+        soTruoc = soSau;
+        soSau = sum;
+    }
+</script>
+</body>
+</html>

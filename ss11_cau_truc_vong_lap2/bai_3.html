@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông</title>
+</head>
+<body>
+
+<script>
+    let tamGiac1 = "";
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            tamGiac1 += "*";
+        }
+        tamGiac1 += "\n";
+    }
+    console.log(tamGiac1)
+    let tamGiac2 = "";
+    for (let i = 5; i > 0; i--) {
+        for (let j = 1; j <= i; j++) {
+            tamGiac2 += "*";
+        }
+        tamGiac2 += "\n";
+    }
+    console.log(tamGiac2)
+    let tamGiac3 = '';
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5 - i; j++) {
+            tamGiac3 += ' ';
+        }
+        for (let k = 1; k <= i; k++) {
+            tamGiac3 += '*';
+        }
+        tamGiac3 += '\n';
+    }
+    console.log(tamGiac3)
+
+    let tamGiac4 = '';
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 0; j < 5 - i; j++) {
+            tamGiac4 += ' ';
+        }
+        for (let k = 0; k < i; k++) {
+            tamGiac4 += '*';
+        }
+        tamGiac4 += '\n';
+    }
+    console.log(tamGiac4)
+</script>
+
+</body>
+</html>

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d592e85a-dd29-4b5d-a748-bef00e5a02ff" name="Changes" comment="" />
+    <list default="true" id="68d28470-a49f-476c-8caa-7cc9a2a90695" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/bai_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bai_5.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,12 +24,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2nkSHxLS7CAXRMq1IqnviMr8HES" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2nq6OR5xbmGJCQPc3feLbnyanQg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,10 +38,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.bang_cuu_chuong.html.executor": "Run",
+    "JavaScript Debug.bai_3.html.executor": "Run",
+    "JavaScript Debug.bai_4.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/CodeGit/C0924L1-module1/ss9_cau_truc_dk2",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,18 +60,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d592e85a-dd29-4b5d-a748-bef00e5a02ff" name="Changes" comment="" />
-      <created>1729515496881</created>
+      <changelist id="68d28470-a49f-476c-8caa-7cc9a2a90695" name="Changes" comment="" />
+      <created>1729688226851</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1729515496881</updated>
-      <workItem from="1729515497902" duration="4741000" />
-      <workItem from="1729676295085" duration="15000" />
-      <workItem from="1729676359606" duration="468000" />
-      <workItem from="1729683749673" duration="3082000" />
-      <workItem from="1729688174096" duration="52000" />
-      <workItem from="1729688485857" duration="930000" />
-      <workItem from="1729691710099" duration="177000" />
+      <updated>1729688226851</updated>
+      <workItem from="1729688227912" duration="3530000" />
     </task>
     <servers />
   </component>

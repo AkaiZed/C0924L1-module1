@@ -11,10 +11,10 @@
         var n = +prompt("Nhập vào số nguyên dương không lớn hơn 20:");
         if (isNaN(n) || n <= 0) {
             alert("Lỗi, vui lòng nhập lại số nguyên dương lớn hơn 0.");
-            continue;
+            // continue;
         } else if (n > 20) {
             alert("Số quá lớn! Vui lòng nhập lại (tối đa là 20).");
-            continue;
+            // continue;
         } else {
             break;
         }
@@ -31,7 +31,7 @@
         }
         if (isPrime) {
             document.write(num + "<br>");
-            count++;
+            count++;        
         }
         num++;
     }
