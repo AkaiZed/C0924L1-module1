@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo 2 mảng, nhập giá trị. Sau đó khởi tạo mảng khác chứa 2 mảng kia</title>
+</head>
+<body>
+<script>
+    while (true) {
+        var n1 = +prompt("Nhập số phần tử trong mảng a");
+        if (isNaN(n1) || n1 <= 0 || n1 % 1 !== 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            break;
+        }
+    }
+    let mangSoNguyenA = new Array(n1);
+    for (let i = 0; i < n1; i++) {
+        while (true) {
+            mangSoNguyenA[i] = +prompt("Nhập số nguyên thứ " + (i + 1));
+            if (isNaN(mangSoNguyenA[i]) || mangSoNguyenA[i] % 1 !== 0) {
+                alert("Lỗi cú pháp, vui lòng thử lại");
+            } else {
+                break;
+            }
+        }
+    }
+    while (true) {
+        var n2 = +prompt("Nhập số phần tử trong mảng b");
+        if (isNaN(n2) || n2 <= 0 || n2 % 1 !== 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            break;
+        }
+    }
+    let mangSoNguyenB = new Array(n2);
+    for (let i = 0; i < n2; i++) {
+        while (true) {
+            mangSoNguyenB[i] = +prompt("Nhập số nguyên thứ " + (i + 1));
+            if (isNaN(mangSoNguyenB[i]) || mangSoNguyenB[i] % 1 !== 0) {
+                alert("Lỗi cú pháp, vui lòng thử lại");
+            } else {
+                break;
+            }
+        }
+    }
+    let mangSoNguyenC = new Array(n1 + n2);
+    let index = 0;
+
+    for (let i = 0; i < n1; i++) {
+        mangSoNguyenC[index] = mangSoNguyenA[i];
+        index++;
+    }
+    for (let i = 0; i < n2; i++) {
+        mangSoNguyenC[index] = mangSoNguyenB[i];
+        index++;
+    }
+    for (giaTri of mangSoNguyenC) {
+        console.log(giaTri);
+    }
+</script>
+</body>
+</html>

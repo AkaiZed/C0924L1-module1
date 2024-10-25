@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<p> Từ hiện có là: </p>
+<label for="dauVao">Nhập từ muốn dịch</label>
+<input id="dauVao" placeholder="Nhập bằng tiếng anh">
+<br><br>
+<button onclick="chuyenDoi()">Dịch</button>
+<p id="ketQua"></p>
+<script>
+    function chuyenDoi() {
+        let tiengAnh = ["Hi", "Thanks", "Pen", "Computer", "Car", "Motorbike"];
+        let tiengViet = ["Xin chào", "Cảm ơn", "Cái bút", "Máy tính", "Xe hơi", "Xe moto"];
+        let tuDich = document.getElementById("dauVao").value;
+        for (let i = 0; i < tiengAnh.length; i++) {
+            if (tuDich.toLowerCase() === tiengAnh[i].toLowerCase()) {
+                document.getElementById("ketQua").innerText = tiengAnh[i] + " nghĩa là: " + tiengViet[i];
+                break;
+            } else {
+                document.getElementById("ketQua").innerText = "Không tìm thấy từ này. Vui lòng nhập lại"
+            }
+        }
+    }
+</script>
+</body>
+</html>

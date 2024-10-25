@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo mảng và xóa V nếu có</title>
+</head>
+<body>
+<script>
+    let mangSoNguyen = new Array(10);
+    for (let i = 0; i < 10; i++) {
+        while (true) {
+            mangSoNguyen[i] = +prompt("Nhập số nguyên thứ " + (i + 1));
+            if (isNaN(mangSoNguyen[i]) || mangSoNguyen[i] % 1 !== 0) {
+                alert("Lỗi cú pháp, vui lòng thử lại");
+            } else {
+                break;
+            }
+        }
+    }
+
+    while (true) {
+        var v = +prompt("Nhập V");
+        if (isNaN(v) || v % 1 !== 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            break;
+        }
+    }
+
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        if (v === mangSoNguyen[i]) {
+            for (let j = i; j < mangSoNguyen.length - 1; j++) {
+                mangSoNguyen[j] = mangSoNguyen[j + 1];
+            }
+            mangSoNguyen[mangSoNguyen.length - 1] = 0;
+            i--;
+        }
+    }
+
+    for (let i = 0; i < 10; i++) {
+        console.log(mangSoNguyen[i]);
+    }
+</script>
+</body>
+</html>

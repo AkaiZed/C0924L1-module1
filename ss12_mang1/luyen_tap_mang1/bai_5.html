@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số nguyên âm trong 1 chuỗi</title>
+</head>
+<body>
+<script>
+    while (true) {
+        var n = +prompt("Nhập số phần tử trong mảng");
+        if (isNaN(n) || n <= 0 || n % 1 !== 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            break;
+        }
+    }
+    let mangSoNguyen = new Array(n);
+    for (let i = 0; i < n; i++) {
+        while (true) {
+            mangSoNguyen[i] = +prompt("Nhập số nguyên thứ " + (i + 1));
+            if (isNaN(mangSoNguyen[i]) || mangSoNguyen[i] % 1 !== 0) {
+                alert("Lỗi cú pháp, vui lòng thử lại");
+            } else {
+                break;
+            }
+        }
+    }
+    let bienDem = 0;
+    for (let i = 0; i < n; i++) {
+        if (mangSoNguyen[i] < 0) {
+            bienDem++;
+        }
+    }
+    console.log(bienDem);
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo mảng, hiện giá trị lớn nhất và tính trung bình</title>
+</head>
+<body>
+<script>
+    while (true) {
+        var n = +prompt("Nhập số phần tử trong mảng");
+        if (isNaN(n) || n <= 0 || n % 1 !== 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            break;
+        }
+    }
+    let mangSoNguyen = new Array(n);
+    for (let i = 0; i < n; i++) {
+        while (true) {
+            mangSoNguyen[i] = +prompt("Nhập số nguyên thứ " + (i + 1));
+            if (isNaN(mangSoNguyen[i]) || mangSoNguyen[i] % 1 !== 0) {
+                alert("Lỗi cú pháp, vui lòng thử lại");
+            } else {
+                break;
+            }
+        }
+    }
+    let sum = 0;
+    let soLonNhat = mangSoNguyen[0];
+    for (let i = 0; i < n; i++) {
+        if (mangSoNguyen[i] > soLonNhat) {
+            soLonNhat = mangSoNguyen[i];
+        }
+        sum += mangSoNguyen[i];
+    }
+    console.log("Số lớn nhất là: " + soLonNhat);
+    console.log("Giá trị trung bình là: " + (sum / n));
+</script>
+</body>
+</html>
