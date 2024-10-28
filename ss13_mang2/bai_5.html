@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 2 chuỗi có giống nhau không</title>
+</head>
+<body>
+<script>
+
+    let arr = new Array(2);
+    for (let i = 0; i < arr.length; i++) {
+        while (true) {
+            let bien = prompt("Nhập chuỗi cho phần tử thứ " + (i + 1));
+            if (typeof bien === "string") {
+                arr[i] = bien;
+                break;
+            } else {
+                alert("Lỗi cú pháp, vui lòng thử lại");
+            }
+        }
+    }
+        if (arr[0].toLowerCase()===arr[1].toLowerCase()) {
+            alert("Hai cái này giống nhau");
+        } else {
+            alert("Hai cái này không giống nhau");
+        }
+
+</script>
+</body>
+</html>

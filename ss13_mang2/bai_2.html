@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng in ngược</title>
+</head>
+<body>
+<script>
+    while (true) {
+        var n = +prompt("Nhập số phần tử của mảng: ");
+        if (isNaN(n) || n <= 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            break;
+        }
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        while (true) {
+            let bien = prompt("Nhập phần tử thứ " + (i + 1));
+            if (typeof bien === "string" && bien.length === 1) {
+                arr[i] = bien;
+                break;
+            } else {
+                alert("Lỗi do nhập quá nhiều ký tự, vui lòng thử lại");
+            }
+        }
+    }
+    let dau = 0, cuoi = arr.length - 1;
+    while (dau < cuoi) {
+        let bienTam = arr[dau];
+        arr[dau] = arr[cuoi];
+        arr[cuoi] = bienTam;
+        dau++;
+        cuoi--;
+    }
+    console.log(arr.join(""));
+    // console.log((arr.reverse()).join(""));
+</script>
+</body>
+</html>
