@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra nguyên dương</title>
+</head>
+<body>
+<script>
+    while (true) {
+        let numb = +prompt("Nhập số nguyên: ");
+        if (isNaN(numb) || numb % 1 !== 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại")
+        } else {
+            alert(checkSoNguyen(numb));
+            break;
+        }
+    }
+    function checkSoNguyen(so) {
+        if (so === 0) {
+            return "Số 0 là số không nguyên";
+        } else if (so > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 2 tham số</title>
+</head>
+<body>
+<label for="nhap1">Nhập số thứ nhất:</label>
+<input id="nhap1" type="number" placeholder="Nhập vào đây">
+<br>
+<label for="nhap2">Nhập số thứ hai:</label>
+<input id="nhap2" type="number" placeholder="Nhập vào đây">
+<br>
+<button onclick="displayResult()">Click</button>
+<p id ="ketQua"></p>
+<script>
+    function displayResult() {
+        let soDau = parseFloat(document.getElementById("nhap1").value);
+        let soHai = parseFloat(document.getElementById("nhap2").value);
+        if (soDau > soHai) {
+            alert("Số thứ nhất lớn hơn số thứ hai")
+        } else {
+            document.getElementById("ketQua").innerText = "Tổng 2 số là: " + (soDau + soHai);
+        }
+    }
+
+</script>
+</body>
+</html>

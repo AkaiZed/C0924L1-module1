@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập vào");
+    alert(checkSo(n));
+
+    function checkSo(chuoi) {
+        if (isNaN(chuoi)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

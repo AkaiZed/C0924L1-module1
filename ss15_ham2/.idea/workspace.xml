@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbc04648-71f9-44cf-a454-a1ce80dc0005" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ss15_ham2/bai_7.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss15_ham2/bai_7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss15_ham2/bai_8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss15_ham2/bai_8.html" afterDir="false" />
-    </list>
+    <list default="true" id="6df2e506-c449-4512-81fb-6fbba33101b5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,12 +18,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2o4EqPToGEYxDU0XSP3IpqrGqBc" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2o9kJ9TawroB5ERNazXDzt5eFYo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,8 +33,8 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/CodeGit/C0924L1-module1/ss12_mang1",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/CodeGit/C0924L1-module1/ss13_mang2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,16 +53,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fbc04648-71f9-44cf-a454-a1ce80dc0005" name="Changes" comment="" />
-      <created>1730120637137</created>
+      <changelist id="6df2e506-c449-4512-81fb-6fbba33101b5" name="Changes" comment="" />
+      <created>1730289104350</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1730120637137</updated>
-      <workItem from="1730120638167" duration="5248000" />
-      <workItem from="1730277295700" duration="1335000" />
-      <workItem from="1730287295803" duration="548000" />
-      <workItem from="1730288409031" duration="22000" />
-      <workItem from="1730294547182" duration="14000" />
+      <updated>1730289104350</updated>
+      <workItem from="1730289105361" duration="4617000" />
     </task>
     <servers />
   </component>

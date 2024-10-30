@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    while (true) {
+        let number = +prompt("Nhập số cần kiểm tra: ");
+        if (isNaN(number) || number % 1 !== 0 || number <= 0) {
+            alert("Sai cú pháp, vui lòng thử lại");
+        } else {
+            isPrime(number)
+            break;
+        }
+    }
+
+    function isPrime(number) {
+        if (number === 1) {
+            alert("1 không phải là số nguyên tố");
+        } else {
+            let count = 0;
+            for (let i = 2; i < number - 1; i++) {
+                if (number % i === 0) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+            inKetQua(count);
+        }
+
+        function inKetQua(count) {
+            if (count == 0) {
+                alert(number + " là số nguyên tố");
+            } else {
+                alert(number + " không phải là số nguyên tố");
+            }
+        }
+    }
+</script>
+</body>
+</html>

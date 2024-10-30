@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhận số nguyên, in số nhỏ nhất</title>
+</head>
+<body>
+<script>
+    while (true) {
+        let s1 = +prompt("Nhập số thứ nhất: ");
+        let s2 = +prompt("Nhập số thứ hai: ");
+        let s3 = +prompt("Nhập số thứ ba: ");
+
+        if (isNaN(s1) || isNaN(s2) || isNaN(s3) || s1 % 1 === 0 || s2 % 1 === 0 || s3 % 1 === 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else if (s1 === 0 || s2 === 0 || s3 === 0) {
+            alert("Đang tồn tại một số không nguyên, vui lòng thử lại");
+        } else {
+            alert("Số nhỏ nhất là: " + soNhoNhat(s1, s2, s3));
+            break;
+        }
+    }
+
+    function soNhoNhat(numb1, numb2, numb3) {
+        if (numb1 <= numb2 && numb1 <= numb3) {
+            return numb1;
+        } else if (numb2 <= numb1 && numb2 <= numb3) {
+            return numb2;
+        } else {
+            return numb3;
+        }
+    }
+</script>
+</body>
+</html>

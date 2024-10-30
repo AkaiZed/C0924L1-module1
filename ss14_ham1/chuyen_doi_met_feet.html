@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<script>
+    while (true) {
+        let feet = +prompt("Nhập giá trị của feet: ");
+        let meter = +prompt("Nhập giá trị của meters: ");
+        if (isNaN(feet) || isNaN(meter) || feet < 0 || meter < 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            footToMeter(feet);
+            meterToFoot(meter);
+            break;
+        }
+    }
+
+    function footToMeter(feet) {
+        meter = 0.305 * feet;
+        console.log(meter);
+    }
+
+    function meterToFoot(meter) {
+        feet = 3.279 * meter;
+        console.log(feet);
+    }
+
+</script>
+</body>
+</html>

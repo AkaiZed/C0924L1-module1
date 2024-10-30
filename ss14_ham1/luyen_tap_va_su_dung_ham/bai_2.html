@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập và trả đối số</title>
+</head>
+<body>
+<label for="nhap">Nhập số:</label>
+<input id="nhap" type="number" placeholder="Nhập vào đây">
+<button onclick="displayResult()">Tăng giá trị</button>
+<p id="ketQua"></p>
+<script>
+    function displayResult() {
+        let input = parseFloat(document.getElementById("nhap").value);
+
+            document.getElementById("ketQua").innerText = "Kết quả: " + (input + 1);
+
+    }
+</script>
+</body>
+</html>

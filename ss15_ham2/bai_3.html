@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+<script>
+    while (true) {
+        let n = +prompt("Nhập số: ");
+        if (isNaN(n) || n < 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            alert(tinhGiaiThua(n));
+            break;
+        }
+    }
+
+    function tinhGiaiThua(n) {
+        if (n === 0) {
+            return 1;
+        } else {
+            return n * tinhGiaiThua(n - 1);
+        }
+    }
+</script>
+</body>
+</html>

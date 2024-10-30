@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đối chiếu sao</title>
+</head>
+<body>
+<h2>Kết quả:</h2>
+<p id="ketQua"></p>
+<script>
+    let sao1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let sao2 = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let dauVao = prompt("Nhập tên ngôi sao: ");
+    if (!dauVao) {
+        alert("Không tìm thấy ngôi sao nào");
+    } else {
+        let found = false;
+        for (let i = 0; i < sao1.length; i++) {
+            if (dauVao.toLowerCase() === sao1[i].toLowerCase()) {
+                document.getElementById("ketQua").innerText = "Ngôi sao " + dauVao + " thuộc chòm sao " + sao2[i];
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            document.getElementById("ketQua").innerText = "Không tìm thấy ngôi sao nào trong danh sách.";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích, chu vi</title>
+</head>
+<body>
+<script>
+    while (true) {
+        let r = +prompt("Nhập bán kính hình tròn: ");
+        if (isNaN(r) || r <= 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            inKetQua(r);
+            break;
+        }
+    }
+
+    function inKetQua(banKinh) {
+        let chuVi = banKinh * 2 * 3.14;
+        let dienTich = banKinh * banKinh * 3.14;
+        alert("Chu vi: " + chuVi.toFixed(2));
+        alert("Diện tích: " + dienTich.toFixed(2));
+    }
+</script>
+</body>
+</html>

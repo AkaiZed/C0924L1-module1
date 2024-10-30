@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ số nguyên</title>
+</head>
+<body>
+<script>
+    while (true) {
+        let s1 = +prompt("Nhập số thứ nhất: ");
+        let s2 = +prompt("Nhập số thứ hai: ");
+
+        console.log("Trước khi đổi: ");
+        console.log("Số thứ nhất:", s1);
+        console.log("Số thứ hai:", s2);
+
+        if (isNaN(s1) || isNaN(s2) || s1 % 1 !== 0 || s2 % 1 !== 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            doiCho(s1, s2);
+            break;
+        }
+    }
+
+    function doiCho(a, b) {
+        let temp = a;
+        a = b;
+        b = temp;
+
+        console.log("Sau khi đổi: ");
+        console.log("Số thứ nhất:", a);
+        console.log("Số thứ hai:", b);
+    }
+</script>
+</body>
+</html>
