@@ -5,6 +5,49 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    while (true) {
+        var n = +prompt("Nhập số phần tử trong mảng:");
+        if (isNaN(n) || n <= 0 || n % 1 !== 0) {
+            alert("Lỗi cú pháp, vui lòng thử lại");
+        } else {
+            break;
+        }
+    }
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        while (true) {
+            arr[i] = prompt("Nhập ký tự thứ " + (i + 1) + ":");
+            if (arr[i].length === 1) {
+                break;
+            } else {
+                alert("Vui lòng nhập đúng 1 ký tự");
+            }
+        }
+    }
+    while (true) {
+        let kyTu = prompt("Nhập ký tự cần tìm kiếm: ");
+        if (kyTu.length === 1) {
+            checkKyTu(kyTu);
+            break;
+        } else {
+            alert("Vui lòng nhập đúng 1 ký tự");
+        }
+    }
 
+    function checkKyTu(kyTu) {
+        let found = false;
+        for (let i = 0; i < n; i++) {
+            if (kyTu === arr[i]) {
+                alert("Ký tự này có trong mảng");
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            alert("Ký tự này không có trong mảng");
+        }
+    }
+</script>
 </body>
 </html>
