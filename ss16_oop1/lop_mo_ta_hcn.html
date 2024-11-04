@@ -5,11 +5,16 @@
     <title>Xây dựng lớp mô tả hình chữ nhật</title>
 </head>
 <body>
+<canvas id="veHcn" width="400" height="600"></canvas>
 <script>
     class Rectangle {
         constructor(length, width) {
-            this.length = length;
-            this.width = width;
+            if (isNaN(length) || isNaN(width) || length < width || length <= 0 || width <= 0) {
+                console.error("Lỗi cú pháp");
+            } else {
+                this.length = length;
+                this.width = width;
+            }
         }
 
         getLength() {
@@ -20,21 +25,21 @@
             return this.width;
         }
 
-        setLength() {
-            if (this.length <= 0) {
-                console.error("Lỗi do chiều dài bé hơn hoặc bằng 0");
-            } else if (this.length < this.width) {
-                console.error("Lỗi do chiều dài bé hơn chiều rộng");
+        setLength(length) {
+            if (isNaN(length) || length <= 0) {
+                console.error("Lỗi do chiều dài bé hơn hoặc bằng không.");
+            } else if (length < this.width) {
+                console.error("Lỗi do chiều dài bé hơn chiều rộng.");
             } else {
                 this.length = length;
             }
         }
 
-        setWidth() {
-            if (this.width <= 0) {
-                console.error("Lỗi do chiều rộng bé hơn hoặc bằng không");
-            } else if (this.length < this.width) {
-                console.error("Lỗi do chiều dài bé hơn chiều rộng");
+        setWidth(width) {
+            if (isNaN(width) || width <= 0) {
+                console.error("Lỗi do chiều rộng bé hơn hoặc bằng không.");
+            } else if (this.length < width) {
+                console.error("Lỗi do chiều dài bé hơn chiều rộng.");
             } else {
                 this.width = width;
             }
@@ -49,12 +54,20 @@
         }
     }
 
-    let hinhChuNhat = new Rectangle(6,5);
-    console.log(hinhChuNhat.getArea());
-    hinhChuNhat.width = 7;
-    hinhChuNhat.length=4;
-    console.log(hinhChuNhat.getArea());
+    let hinhChuNhat = new Rectangle(5, 3);
+    console.log("Diện tích:", hinhChuNhat.getArea());
+    console.log("Chu vi:", hinhChuNhat.getPerimeter());
+    // hinhChuNhat.setWidth(-2);
 
+    hinhChuNhat.setWidth(2);
+    hinhChuNhat.setLength(4);
+    console.log("Diện tích sau khi cập nhật:", hinhChuNhat.getArea());
+    console.log("Chu vi sau khi cập nhật:", hinhChuNhat.getPerimeter());
+
+    let canvas = document.getElementById("veHcn");
+    let hinhAnh = canvas.getContext("2d");
+    // hinhAnh.fillStyle='#ff0000';
+    hinhAnh.fillRect(20, 20, 400,200);
 </script>
 </body>
 </html>

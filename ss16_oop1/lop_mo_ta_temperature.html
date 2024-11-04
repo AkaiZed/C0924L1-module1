@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(doC) {
+            if (isNaN(doC) || doC < -273) {
+                console.error("Lỗi cú pháp");
+            } else {
+                this.doC = doC;
+            }
+        }
+
+        getDoF() {
+            return (this.doC * 9 / 5) + 32;
+        }
+
+        getDoK() {
+            return this.doC + 273;
+        }
+    }
+
+    let nhietDo = new Temperature(25);
+    console.log("Độ F: " + nhietDo.getDoF());
+    console.log("Độ K: " + nhietDo.getDoK());
+
+</script>
+</body>
+</html>
