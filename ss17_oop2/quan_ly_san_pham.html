@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+</head>
+<body>
+
+<label>Enter product ID: </label>
+<input id="id" placeholder="Enter here">
+<br><br>
+<label>Enter product name: </label>
+<input id="name" placeholder="Enter here">
+<br><br>
+<label>Enter product quantity: </label>
+<input id="numb" placeholder="Enter here">
+<br><br>
+<label>Enter product price ($): </label>
+<input id="price" placeholder="Enter here">
+<br><br>
+<button onclick="addProduct()">Add</button>
+<p id="result"></p>
+
+<script>
+    class Product {
+        constructor(id, name, numb, price) {
+            this.id = id;
+            this.name = name;
+            this.numb = numb;
+            this.price = price;
+        }
+    }
+
+    let productList = [
+        new Product("HQ-0001", "Melon", 20, 5),
+        new Product("HQ-0002", "Lemon", 25, 7.5),
+        new Product("HQ-0003", "Watermelon", 10, 3.4),
+        new Product("HQ-0004", "Orange", 13, 3),
+        new Product("HQ-0005", "Apple", 17, 3),
+        new Product("HQ-0006", "Strawberry", 12, 5),
+        new Product("HQ-0007", "Banana", 40, 8),
+        new Product("HQ-0008", "Grapes", 37, 6.4),
+        new Product("HQ-0009", "Mango", 48, 4.3),
+        new Product("HQ-0010", "Durian", 23, 4.4),
+    ];
+
+    function displayProduct() {
+        let tableString = `<table border="1" style="border-collapse: collapse">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name of product</th>
+                                <th>Number of product</th>
+                                <th>Price</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>`;
+
+        for (let i = 0; i < productList.length; i++) {
+            tableString += `<tr>
+                <td>${productList[i].id}</td>
+                <td>${productList[i].name}</td>
+                <td>${productList[i].numb}</td>
+                <td>${productList[i].price}</td>
+                <td>
+                    <button onclick="editProduct(${i})">Edit</button>
+                </td>
+                <td>
+                    <button onclick="deleteProduct(${i})">Delete</button>
+                </td>
+            </tr>`;
+        }
+
+        tableString += `</table>`;
+        document.getElementById('result').innerHTML = tableString;
+    }
+
+    function isDuplicateID(id, indexToSkip = -1) {
+        return productList.some((product, index) => product.id === id && index !== indexToSkip);
+    }
+
+    function addProduct() {
+        let id = document.getElementById('id').value;
+        let name = document.getElementById('name').value;
+        let numb = parseInt(document.getElementById('numb').value);
+        let price = parseFloat(document.getElementById('price').value);
+
+        if (!id || !name || isNaN(numb) || numb <= 0 || !Number.isInteger(numb) || isNaN(price) || price <= 0) {
+            alert("Please enter valid product details. Quantity must be a positive integer and price must be greater than 0.");
+            return;
+        }
+
+        if (isDuplicateID(id)) {
+            alert("Product ID already exists. Please enter a new ID.");
+            return;
+        }
+
+        productList.push(new Product(id, name, numb, price));
+        displayProduct();
+        clearData();
+    }
+
+    function editProduct(index) {
+        let code = prompt("Enter new product ID:", productList[index].id);
+        let name = prompt("Enter new product name:", productList[index].name);
+        let numb = parseInt(prompt("Enter new product quantity:", productList[index].numb));
+        let price = parseFloat(prompt("Enter new product price:", productList[index].price));
+
+        if (!code || !name || isNaN(numb) || numb <= 0 || !Number.isInteger(numb) || isNaN(price) || price <= 0) {
+            alert("Please enter valid product details. Quantity must be a positive integer and price must be greater than 0.");
+            return;
+        }
+
+        if (isDuplicateID(code, index)) {
+            alert("Product ID already exists. Please enter a new ID.");
+            return;
+        }
+
+        productList[index] = new Product(code, name, numb, price);
+        displayProduct();
+    }
+
+    function deleteProduct(index) {
+        let check = confirm("Do you want to delete the product: " + productList[index].name + "???");
+        if (check) {
+            productList.splice(index, 1);
+            displayProduct();
+        }
+    }
+
+    function clearData() {
+        document.getElementById('id').value = '';
+        document.getElementById('name').value = '';
+        document.getElementById('numb').value = '';
+        document.getElementById('price').value = '';
+    }
+
+    displayProduct();
+</script>
+</body>
+</html>
