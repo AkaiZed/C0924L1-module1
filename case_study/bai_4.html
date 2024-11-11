@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phân số tối giản</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập vào đây");
+    find(n);
+
+    function find(x) {
+        if (x.includes("/") && x.indexOf("/") === x.lastIndexOf("/")) {
+            let arr = x.split("/");
+            let tuSo = arr[0];
+            let mauSo = arr[1];
+            checkThamSo(tuSo, mauSo);
+        } else {
+            alert("Lỗi cú pháp: Đầu vào phải có định dạng x/y và không chứa ký tự đặc biệt");
+        }
+    }
+
+    function checkThamSo(a, b) {
+        if (a === "" || b === "" || isNaN(a) || isNaN(b) || b === 0) {
+            alert("Không phải là phân số");
+        } else {
+            toiGian(a, b);
+        }
+    }
+
+    function gcd(a, b) {
+        if (b === 0) return a;
+        return gcd(b, a % b);
+    }
+
+    function toiGian(a, b) {
+        let ucln = gcd(a, b);
+        a = a / ucln;
+        b = b / ucln;
+        if (b === 1) {
+            alert("Phân số tối giản: " + a);
+        } else {
+            alert("Phân số tối giản: " + a + "/" + b);
+        }
+    }
+</script>
+</body>
+</html>
