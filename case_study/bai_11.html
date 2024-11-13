@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check tam giác</title>
+</head>
+<body>
+<script>
+    let a = new Array(3);
+    for (let i = 0; i < a.length; i++) {
+        while (true) {
+            a[i] = +prompt("Nhập cạnh thứ " + (i + 1));
+            if (isNaN(a[i])) {
+                alert("Lỗi cú pháp, vui lòng thử lại");
+            } else {
+                break;
+            }
+        }
+    }
+    if (a[0] <= 0 || a[1] <= 0 || a[2] <= 0) {
+        alert("Không phải là cạnh của một tam giác");
+    } else {
+        if (a[0] + a[1] <= a[2] || a[1] + a[2] <= a[0] || a[0] + a[2] <= a[1]) {
+            alert("Không phải là cạnh của một tam giác");
+        } else {
+            if (a[0] * a[0] + a[1] * a[1] !== a[2] * a[2] || a[1] * a[1] + a[2] * a[2] !== a[0] * a[0] || a[0] * a[0] + a[2] * a[2] !== a[1] * a[1]) {
+                alert("Chỉ là 3 cạnh của một tam giá");
+            } else {
+                alert("Là 3 cạnh của một tam giác vuông");
+            }
+        }
+    }
+</script>
+</body>
+</html>
