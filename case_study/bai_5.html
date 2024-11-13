@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số</title>
+</head>
+<body>
+<script>
+    while (true) {
+        var so = prompt("Nhập số: ");
+
+        if (isNaN(so) || so % 1 !== 0 || so.length !== 4) {
+            alert("Lỗi cú pháp, vui lòng thử lại (nhập số nguyên có 4 chữ số)");
+        } else {
+            so = parseInt(so);
+            let soLonNhat;
+
+            let hangNghin = Math.floor(so / 1000);
+            let hangTram = Math.floor((so % 1000) / 100);
+            let hangChuc = Math.floor((so % 100) / 10);
+            let hangDonVi = so % 10;
+
+            let so1 = hangTram * 100 + hangChuc * 10 + hangDonVi;
+            let so2 = hangNghin * 100 + hangChuc * 10 + hangDonVi;
+            let so3 = hangNghin * 100 + hangTram * 10 + hangDonVi;
+            let so4 = hangNghin * 100 + hangTram * 10 + hangChuc;
+
+            soLonNhat = so1;
+            if (so2 > soLonNhat) {
+                soLonNhat = so2;
+            }
+            if (so3 > soLonNhat) {
+                soLonNhat = so3;
+            }
+            if (so4 > soLonNhat) {
+                soLonNhat = so4;
+            }
+
+            alert("Số lớn nhất có thể đạt được bằng cách xóa một chữ số là: " + soLonNhat);
+            break;
+        }
+    }
+</script>
+</body>
+</html>

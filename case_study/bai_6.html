@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Check tăng dần</title>
+    <title>Check hàm</title>
 </head>
 <body>
 <script>
-
     while (true) {
         var n = +prompt("Nhập số hạng phần tử: ");
         if (isNaN(n) || n % 1 !== 0 || n <= 0) {
@@ -14,7 +13,7 @@
         } else if (n > 20) {
             alert("Lỗi yêu cầu đề, vui lòng thử lại");
         } else {
-                break;
+            break;
         }
     }
     let arr = new Array(n);
@@ -28,27 +27,23 @@
             }
         }
     }
-    console.log(arr);
-    let check = true;
-    let temp = arr[1] - arr[0];
-    if (temp <= 0) {
-        check = false;
-    } else if (arr.length < 3) {
-        check = false;
-    } else {
-        for (let i = 1; i < arr.length - 1; i++) {
-            if (arr[i + 1] - arr[i] != temp) {
-                check = false;
-                break;
+    alert("Kết quả: " + checkHam(arr));
+    function checkHam(array) {
+        let checkLe = false;
+        let checkChan = false;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 === 0) {
+                checkLe = false;
+            } else {
+                checkChan = false;
             }
         }
+        if (!checkChan && !checkLe) {
+            return -1;
+        } else {
+            return checkChan ? 1 : 0;
+        }
     }
-    if (check) {
-        alert("OK");
-    } else {
-        alert("NO");
-    }
-
 </script>
 </body>
 </html>
