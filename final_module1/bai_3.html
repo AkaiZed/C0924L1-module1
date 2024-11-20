@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check số ngày</title>
+</head>
+<body>
+<script>
+    while (true) {
+        let n = prompt("Nhập tháng/năm (định dạng mm/yyyy):");
+        if (kiemTraDinhDang(n)) {
+            break;
+        }
+    }
+
+    function kiemTraDinhDang(x) {
+        if (x.includes("/") && x.indexOf("/") === x.lastIndexOf("/")) {
+            let arr = x.split("/");
+            let thang = parseInt(arr[0]);
+            let nam = parseInt(arr[1]);
+            return checkThamSo(thang, nam);
+        } else {
+            alert("Lỗi cú pháp: Đầu vào phải có định dạng mm/yyyy và không chứa ký tự đặc biệt.");
+            return false;
+        }
+    }
+
+    function checkThamSo(thang, nam) {
+        if (thang === "" || nam === "" || isNaN(thang) || isNaN(nam) || thang <= 0 || thang > 12) {
+            alert("Tháng không hợp lệ, vui lòng thử lại.");
+            return false;
+        } else {
+            inNgay(thang, nam);
+            return true;
+        }
+    }
+
+    function inNgay(thang, nam) {
+        if (thang === 2) {
+            alert(checkNamNhuan(nam) ? "29 ngày" : "28 ngày");
+        } else {
+            alert(thang === 1 || thang === 3 || thang === 5 || thang === 7 || thang === 8 || thang === 10 || thang === 12 ? "31 ngày" : "30 ngày");
+        }
+
+        function checkNamNhuan(nam) {
+            return (nam % 4 === 0 && nam % 100 !== 0) || (nam % 400 === 0);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check số hoàn hảo</title>
+</head>
+<body>
+<script>
+    while (true) {
+        var n = +prompt("Nhập số nguyên dương: ");
+        if (isNaN(n) || n % 1 !== 0) {
+            alert("Sai cú pháp, vui lòng thử lại");
+        } else if (n <= 0) {
+            alert("Sai yêu cầu đề, vui lòng thử lại");
+        } else {
+            let ketQua = checkSoHoanHao(n);
+            alert(ketQua ? "True" : "False");
+            break;
+        }
+    }
+
+    function checkSoHoanHao(x) {
+        let tongUoc = 0;
+        for (let i = 1; i < x; i++) {
+            if (x % i === 0) {
+                tongUoc += i;
+            }
+        }
+        return tongUoc === x;
+    }
+</script>
+</body>
+</html>
